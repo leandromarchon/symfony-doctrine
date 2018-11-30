@@ -41,6 +41,13 @@ class Cliente
     private $endereco;
 
     /**
+     * @var object
+     * @ORM\ManyToMany(targetEntity="App\Entity\Animal", inversedBy="cliente")
+     * @ORM\JoinTable(name="animal_cliente")
+     */
+    private $animal;
+
+    /**
      * @return mixed
      */ 
     public function getId()
@@ -117,6 +124,24 @@ class Cliente
     public function setEndereco(object $endereco)
     {
         $this->endereco = $endereco;
+        return $this;
+    }
+
+    /**
+     * @return object
+     */ 
+    public function getAnimal()
+    {
+        return $this->animal;
+    }
+
+    /**
+     * @param object $animal
+     * @return self
+     */ 
+    public function setAnimal(object $animal)
+    {
+        $this->animal = $animal;
         return $this;
     }
 }
