@@ -35,6 +35,12 @@ class Cliente
     private $email;
 
     /**
+     * @var object
+     * @ORM\ManyToOne(targetEntity="App\Entity\Endereco", inversedBy="id")
+     */
+    private $endereco;
+
+    /**
      * @return mixed
      */ 
     public function getId()
@@ -93,6 +99,24 @@ class Cliente
     public function setEmail(string $email)
     {
         $this->email = $email;
+        return $this;
+    }
+
+    /**
+     * @return object
+     */ 
+    public function getEndereco()
+    {
+        return $this->endereco;
+    }
+
+    /**
+     * @param object $endereco
+     * @return self
+     */ 
+    public function setEndereco(object $endereco)
+    {
+        $this->endereco = $endereco;
         return $this;
     }
 }
