@@ -22,4 +22,15 @@ class AnimaisController extends Controller
             'animais' => $animais
         ];
     }
+
+    /**
+     * @Route("animal/visualizar/{id}", name="visualizar_animal")
+     * @Template("animal/view.html.twig")
+     */
+    public function view(Animal $animal)
+    {
+        return [
+            'animal' => $animal
+        ];
+    }
 }

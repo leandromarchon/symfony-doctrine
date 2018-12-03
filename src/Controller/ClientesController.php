@@ -22,4 +22,15 @@ class ClientesController extends Controller
             'clientes' => $clientes
         ];
     }
+
+    /**
+     * @Route("/cliente/visualizar/{id}", name="visualizar_cliente")
+     * @Template("clientes/view.html.twig")
+     */
+    public function view(Cliente $cliente)
+    {
+        return [
+            'cliente' => $cliente
+        ];
+    }
 }
