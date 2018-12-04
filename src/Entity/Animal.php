@@ -69,7 +69,7 @@ class Animal
     /**
      * @return date
      */ 
-    public function getData_nascimento()
+    public function getDataNascimento()
     {
         return $this->data_nascimento;
     }
@@ -78,7 +78,7 @@ class Animal
      * @param date $data_nascimento
      * @return self
      */ 
-    public function setData_nascimento(date $data_nascimento)
+    public function setDataNascimento($data_nascimento)
     {
         $this->data_nascimento = $data_nascimento;
         return $this;
