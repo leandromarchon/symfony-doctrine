@@ -38,5 +38,19 @@
             <th>Cidade</th>
             <td>{{ cliente.endereco.cidade }}</td>
         </tr>
+        <tr>
+            <th colspan="2">Animais</th>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                {% for animal in cliente.animal %}
+                    <li><a href="{{ path('visualizar_animal', {'id': animal.id}) }}">{{ animal.nome }}</a></li>
+                {% else %}
+                    <li>Nenhum registro encontrado!</li>
+                {% endfor %}
+                </ul>
+            </td>
+        </tr>
     </table>
 {% endblock %}

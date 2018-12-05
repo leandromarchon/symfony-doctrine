@@ -1,12 +1,31 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+
+    {% for flashMessage in app.session.flashbag.get('success') %}
+        <div class="alert alert-success">
+            {{ flashMessage }}
+        </div>
+    {% endfor %}
+
+    {% for flashMessage in app.session.flashbag.get('warning') %}
+        <div class="alert alert-warnig">
+            {{ flashMessage }}
+        </div>
+    {% endfor %}
+
+    {% for flashMessage in app.session.flashbag.get('danger') %}
+        <div class="alert alert-danger">
+            {{ flashMessage }}
+        </div>
+    {% endfor %}
+
     <h1>Listagem de Clientes</h1>
     <hr>
 
     <div class="row">
         <div class="col-md-12">
-            <a href="" class="btn btn-primary pull-right">Cadastrar Cliente</a>
+            <a href="{{ path('cadastrar_cliente') }}" class="btn btn-primary pull-right">Cadastrar Cliente</a>
         </div>
     </div>
 

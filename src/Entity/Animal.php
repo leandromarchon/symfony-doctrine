@@ -94,9 +94,9 @@ class Animal
 
     /**
      * @param object $cliente
-     * @return self
+     * @return Animal
      */ 
-    public function setCliente(object $cliente)
+    public function setCliente($cliente)
     {
         $this->cliente = $cliente;
         return $this;

@@ -27,7 +27,7 @@ class AnimaisController extends Controller
 
     /**
      * @Route("animal/visualizar/{id}", name="visualizar_animal")
-     * @Template("animal/view.html.twig")
+     * @Template("animais/view.html.twig")
      */
     public function view(Animal $animal)
     {
