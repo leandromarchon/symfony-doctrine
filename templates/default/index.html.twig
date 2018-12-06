@@ -4,4 +4,27 @@
     <div class="starter-template">
         <h1>School of Net - Symfony com Doctrine</h1>
     </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <table class="table table-striped">
+                {% for qtd_animal in qtd_animais %}
+                <tr>
+                    <th>{{ qtd_animal.nome }}</th>
+                    <td>{{ qtd_animal.qtd }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="col-md-6">
+            <table class="table table-striped">
+                {% for qtd_raca in qtd_racas %}
+                <tr>
+                    <th>{{ qtd_raca.nome }}</th>
+                    <td>{{ qtd_raca.qtd }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
 {% endblock %}
